@@ -27,3 +27,5 @@ To effectively capture and analyze web traffic using Burp Suite, we'll need to c
  - Confirm that your browser is configured to route traffic through Burp Suite's proxy.
 
 ![4](https://github.com/user-attachments/assets/87660af9-55e7-4a97-b962-04065b5c339e)
+
+![1](https://github.com/user-attachments/assets/58a072d5-d8d1-47c9-989d-187d63e26ed9)
