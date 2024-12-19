@@ -24,3 +24,4 @@ To effectively capture and analyze web traffic using Burp Suite, we'll need to c
 ![3](https://github.com/user-attachments/assets/1833c886-ea62-4578-b1c6-0fba9bd393ce)
 
 
+![4](https://github.com/user-attachments/assets/87660af9-55e7-4a97-b962-04065b5c339e)
