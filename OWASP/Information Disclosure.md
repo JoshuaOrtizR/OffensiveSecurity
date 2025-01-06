@@ -44,3 +44,10 @@ This connection builder likely includes sensitive information such as the databa
 This discovery presents a significant security vulnerability. By obtaining the database credentials, an attacker could potentially gain unauthorized access to sensitive data within the database.
 
 ![4](https://github.com/user-attachments/assets/6c6bbeee-d2f3-4ad8-9676-1589f98f6902)
+
+
+We discovered that items in this web page have unique IDs. To test for vulnerabilities, we tried accessing an item with an extremely high and likely non-existent ID (e.g., 5454545454). This caused the application to throw an error, revealing that it's using Java code and specifically the Apache Commons library. 
+
+This information is helpful for our penetration testing report as it helps us understand the application's underlying technology and potential vulnerabilities associated with the specific Apache Commons version.
+
+![5](https://github.com/user-attachments/assets/8cacdb96-44d0-4c17-ad94-8e0f01985b1b)
