@@ -1,4 +1,4 @@
-Google Hacking
+Google Hacking | Google Dorks
 
 Below are the main commands we can use with Google. Keep in mind that all of them must be followed (without spaces) by the query you wish to perform:
 
