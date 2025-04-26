@@ -208,10 +208,6 @@ netsh Advfirewall set allprofiles state off
     PowerView PS C:\> Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
     ```
 
-* Applocker Bypass
-    * https://github.com/api0cradle/UltimateAppLockerByPassList/blob/master/Generic-AppLockerbypasses.md
-    * https://github.com/api0cradle/UltimateAppLockerByPassList/blob/master/VerifiedAppLockerBypasses.md
-    * https://github.com/api0cradle/UltimateAppLockerByPassList/blob/master/DLL-Execution.md
 
 ### Powershell
 
