@@ -310,7 +310,8 @@ reg query HKCU /f password /t REG_SZ /s
 
 ### Read a value of a certain sub key
 
-```powershell
+```
+powershell
 REG QUERY "HKLM\Software\Microsoft\FTH" /V RuleList
 ```
 
