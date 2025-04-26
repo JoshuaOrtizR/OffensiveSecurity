@@ -199,9 +199,9 @@ netsh Advfirewall set allprofiles state off
 
 ### AppLocker Enumeration
 
-    ```powershell
-    PowerView PS C:\> Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
-    ```
+```powershell
+ PowerView PS C:\> Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
+```
 
 
 ### Powershell
@@ -226,7 +226,9 @@ rev.ps
 
 # PowerShDLL - Powershell with no Powershell.exe via DLL’s
 # 
-https://github.com/
+https://
+github.com
+/
 p3nt4/PowerShdll
 ftp> rundll32.exe C:\temp\PowerShdll.dll,main
 ```
@@ -254,7 +256,7 @@ C:\Users\Public
 
 ### SAM and SYSTEM files
 
-The Security Account Manager (SAM), often Security Accounts Manager, is a database file. The user passwords are stored in a hashed format in a registry hive either as a LM hash or as a NTLM hash. This file can be found in %SystemRoot%/system32/config/SAM and is mounted on HKLM/SAM.
+The Security Account Manager (SAM), sometimes referred to as the Security Accounts Manager, is a crucial database file in Windows that manages user accounts and security descriptors for local users and groups. User passwords are not stored in plain text but rather as cryptographic hashes. Historically, these were stored as LM (Lan Manager) hashes, but modern systems primarily use the more secure NTLM (NT LAN Manager) hash. This database file, named SAM, is located within the Windows system directory at %SystemRoot%\system32\config\SAM and is mounted in the system registry under the HKLM\SAM key. Access to this file is highly restricted due to its sensitive nature.
 
 ```powershell
 # Usually %SYSTEMROOT% = C:\Windows
