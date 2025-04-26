@@ -199,11 +199,6 @@ netsh Advfirewall set allprofiles state off
 
 ### AppLocker Enumeration
 
-- With the GPO
-- HKLM\SOFTWARE\Policies\Microsoft\Windows\SrpV2 (Keys: Appx, Dll, Exe, Msi and Script).
-
-
-* List AppLocker rules
     ```powershell
     PowerView PS C:\> Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
     ```
